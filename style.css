@@ -236,7 +236,7 @@ footer p{
     font-weight: 500;
     font-size: 18px;
     color: #147c00;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .box p{
@@ -245,7 +245,7 @@ footer p{
     margin: 12px 0;
     text-transform: uppercase;
     font-family: 'Ubuntu', sans-serif;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .box:hover{
@@ -488,7 +488,7 @@ footer p{
 
 }
 .overlay:target img{
-    animation: zoomDanFade 1s;
+    animation: fade 1s;
 }
 .overlay .close{
     position: absolute;
@@ -500,6 +500,7 @@ footer p{
     border: 1px solid white;
     padding: 3px;
     opacity: 0;
+    text-decoration: none;
 }
 .overlay:target .close{
     animation: slideDownFade .5s .5s forwards;
@@ -526,6 +527,36 @@ footer p{
         opacity: 1;
         margin-top: 0;
     }
+}
+
+/* slide */
+
+.back,
+.next{
+     width: 48px;
+     height: 48px;
+     background-image: url(/img/icons8-right-button-48\ \(1\).png);
+     position: absolute;
+     text-indent: -9999px;
+     top: 46%;
+     margin-left: 20px;
+     opacity: 0;
+}
+.back{
+    background-image: url(/img/icons8-prev-48.png);
+    margin-left: -80px;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.overlay:target .next,
+.overlay:target .back{
+    animation: fade .5s .5s forwards;
 }
 
 
