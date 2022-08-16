@@ -236,7 +236,6 @@ footer p{
     font-weight: 500;
     font-size: 18px;
     color: #147c00;
-    text-decoration: underline;
 }
 
 .box p{
@@ -245,7 +244,9 @@ footer p{
     margin: 12px 0;
     text-transform: uppercase;
     font-family: 'Ubuntu', sans-serif;
-    text-decoration: underline;
+}
+.text-decoration-none {
+    text-decoration: none!important;
 }
 
 .box:hover{
@@ -806,6 +807,10 @@ button{
 	height: 100%;
 	font-size: 25px;
 	color: #ffffff;
+    text-decoration: none !important;
+}
+.text-decoration-none {
+    text-decoration: none!important;
 }
 .img {
 	width: 45px;
@@ -881,6 +886,7 @@ button{
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     transition-property: background-color, color;
+    box-shadow: 1px 2px 4px rgb(0, 0, 0);
 }
 #back-to-top-btn:hover{
     background: yellowgreen;
@@ -1089,10 +1095,6 @@ button{
         font-family: 'Josefin Sans', sans-serif;
         font-size: 11px;
     }
-    .home h5, span{
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 13px;
-    }
     .home p{
         margin: 19px 0 10px;
         font-family: 'Ubuntu', sans-serif;
@@ -1241,5 +1243,16 @@ button{
     }
     .alert{
         font-size: 15px;
+    }
+    .back,
+    .next{
+     width: 48px;
+     height: 48px;
+     text-indent: -9999px;
+     top: 36%;
+     margin-left: -52px;
+    }
+    .back{
+        margin-left: 2px;
     }
 }
