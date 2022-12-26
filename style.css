@@ -942,6 +942,12 @@ button {
 
 /* tablet */
 @media screen and (max-width: 768px) {
+    .item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
   .menu-toogle {
     display: flex;
   }
