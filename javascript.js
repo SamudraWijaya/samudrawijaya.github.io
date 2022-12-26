@@ -34,7 +34,3 @@ window.addEventListener("scroll", () => {
   }
 }
 
-for (var i = 0; i < 5; i++) {
-  alert("hello");
-}
-alert("selesai");
