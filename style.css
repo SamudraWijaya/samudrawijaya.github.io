@@ -12,6 +12,7 @@ html {
 
 body {
   overflow-x: hidden;
+  background-image: url(/img/4850037.jpg);
 }
 nav a img {
   width: 27px;
@@ -33,34 +34,29 @@ h3 a span {
 }
 nav {
   position: fixed;
-  z-index: 1000;
   width: 100%;
   display: flex;
   background: transparent;
   justify-content: space-around;
   /* padding: 20px 0; */
-  align-items: center;
   height: 60px;
   align-items: center;
-}
-.fa {
-  margin-right: 8px;
-  font-size: 13px;
+  z-index: 10000;
 }
 nav ul {
   display: flex;
   width: 40%;
   justify-content: space-around;
 }
-nav a {
+nav ul li a {
   color: black;
+  font-family: "Roboto Slab", serif;
 }
-nav li {
+nav ul li {
   position: relative;
   display: inline;
   margin-right: 20px;
 }
-
 nav ul li a::after {
   position: absolute;
   content: "";
@@ -77,7 +73,6 @@ nav ul li a:hover::after {
 nav ul li a:hover {
   color: #147c00;
 }
-
 /* sticky */
 nav.sticky {
   background: white;
@@ -109,13 +104,9 @@ nav.sticky ul a::after {
 /* main */
 
 main .foto img {
-  height: 15rem;
-  width: 15rem;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 7px solid;
-  color: #147c00;
+  width: 350px;
+  border-top-left-radius: 100px;
+  box-shadow: 5px 0px 5px 5px rgb(10 15 70 / 7%);
 }
 
 main {
@@ -123,30 +114,23 @@ main {
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  background: url(/img/back.jpg);
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 .medsos a {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #147c00;
-  font-size: 15px;
-  color: rgb(255, 246, 246);
-  margin-right: 10px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-.medsos a:hover {
-  background: #000000;
-  color: aliceblue;
-  transition: 0.5;
+  font-size: 23px;
+  color: black;
+  margin-right: 1px;
+  margin-bottom: 20px;
+  margin-top: 15px;
 }
 .btn {
   display: inline-block;
@@ -154,47 +138,43 @@ main {
   padding: 9px 30px;
   background: #147c00;
   border: 0px solid;
-  border-radius: 30px;
+  border-radius: 5px;
   letter-spacing: 1px;
   font-weight: ease 0.5s;
   color: rgb(255, 255, 255);
   font-family: "Lato", sans-serif;
+  text-decoration: none;
+}
+.btn a {
+  color: aliceblue;
+}
+.btn .fa {
+  margin-left: 5px;
 }
 .btn:hover {
   transform: scale(1.1);
   transition: 0.5;
 }
 .home h1 {
-  margin: 3px 0 10px;
+  margin: 6px 0px 10px;
+  font-size: 30px;
   line-height: 1;
   font-weight: 500;
-  font-family: "Mochiy Pop One", sans-serif;
-  font-size: 29px;
+  font-family: "Roboto Slab", serif;
 }
 .home h3 {
   font-family: "Josefin Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 500;
 }
-.home h5,
-span {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 14px;
+.home h5 {
+  font-size: 20px;
+  font-weight: 500;
 }
-span {
-  color: #147c00;
-}
-.home p {
-  margin: 19px 0 10px;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 13px;
-}
-footer p {
-  width: 100%;
-  height: 30px;
-  background: #adafad;
-  text-align: center;
-}
+
+/*  */
 .sub {
-  background: white;
+  /* background: white; */
 }
 
 .item {
@@ -204,53 +184,72 @@ footer p {
   justify-content: center;
 }
 
-.sub-img img {
-  color: #147c00;
-  max-width: 100%;
-  width: 50px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
 .box {
-  margin: 5px;
   margin-bottom: 50px;
-  width: 300px;
+  width: 270px;
+  height: 320px;
   line-height: 20px;
   position: relative;
-  padding: 45px 45px 45px 45px;
   transition: ease 0.5s;
   cursor: pointer;
+  background: white;
+  margin: 25px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  border-radius: 5px;
+  transition: 0.2s all ease-out;
 }
-
-.box h4 {
+.box:hover .card-img {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  transition: 0.5s all ease-out;
+}
+.card-img {
+  background: url(/img/big-slider-5.jpg);
+  background-size: cover;
+  height: 70%;
+}
+.box:hover .card-img2 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  transition: 0.5s all ease-out;
+}
+.card-img2 {
+  background: url(/img/art-gallery-painting-wall-bench-picture-frames-hd-wallpaper-preview.jpg);
+  background-size: cover;
+  height: 70%;
+}
+.card-text {
+  position: absolute;
+  bottom: 0;
+}
+.card-text h1 {
+  color: black;
+  margin: 10px;
   font-family: "Roboto Slab", serif;
-  margin-bottom: 24px;
-  font-weight: 500;
-  font-size: 18px;
-  color: #147c00;
 }
-
-.box p {
-  color: #000000;
-  font-size: 12px;
-  margin: 12px 0;
-  text-transform: uppercase;
+.card-text p {
   font-family: "Ubuntu", sans-serif;
+  color: black;
+  margin-bottom: 10px;
 }
-
-.box:hover {
-  background: #ffffff;
-  box-shadow: 10px 0px 11px 14px rgb(10 15 70 / 7%);
-  border-radius: 12px;
-  transform: scale3d(1.05, 1.05, 1.05);
+.box:hover .card-text {
+  position: absolute;
+  bottom: 0;
 }
 
 /* profile */
-
-#profile {
-  background: url(/img/back.jpg);
-}
 
 .row {
   display: flex;
@@ -263,7 +262,6 @@ footer p {
   margin: auto;
 }
 .profile {
-  background: url(back.jpg);
   padding: 100px 18%;
 }
 .section .container3 {
@@ -518,7 +516,6 @@ footer p {
 /* contact */
 
 section {
-  background-image: url(/img/back.jpg);
   padding: 100px 18%;
 }
 .section .container {
@@ -941,23 +938,6 @@ button {
   .section-title {
     padding: 60px 3%;
   }
-  .home h1 {
-    margin: 3px 0 10px;
-    line-height: 1;
-    font-weight: 100;
-    font-size: 28px;
-  }
-  .home h3 {
-    font-size: 12px;
-  }
-  .home h5,
-  span {
-    font-size: 15px;
-  }
-  .home p {
-    margin: 19px 0 10px;
-    font-size: 12px;
-  }
 }
 
 /* tablet */
@@ -991,10 +971,7 @@ button {
   main {
     padding: 70px 3%;
   }
-  main .foto img {
-    height: 14rem;
-    width: 14rem;
-  }
+
   .image-content,
   .profile .content .skill,
   .profile .content .personal-info {
@@ -1004,27 +981,6 @@ button {
     align-items: center;
     justify-content: center;
     transition: 0.3s;
-  }
-  .home h1 {
-    margin: 3px 0 10px;
-    line-height: 1;
-    font-weight: 100;
-    font-family: "Mochiy Pop One", sans-serif;
-    font-size: 19px;
-  }
-  .home h3 {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 11px;
-  }
-  .home h5,
-  span {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 13px;
-  }
-  .home p {
-    margin: 19px 0 10px;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 12px;
   }
 }
 
@@ -1053,33 +1009,24 @@ button {
     opacity: 1;
     transform: rotateX(0);
   }
-  main .foto img {
-    height: 10rem;
-    width: 10rem;
-  }
   main {
     padding: 70px 3%;
   }
-
-  .home h1 {
-    margin: 3px 0 10px;
-    line-height: 1;
-    font-weight: 100;
-    font-family: "Mochiy Pop One", sans-serif;
-    font-size: 15px;
+}
+@media screen and (max-width: 875px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
   }
-  .home h3 {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 10px;
+  main .foto img {
+    width: 300px;
+    margin-bottom: 0px;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
   }
-  .home h5,
-  span {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 12px;
-  }
-  .home p {
-    margin: 19px 0 10px;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 12px;
+  .home-text {
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
   }
 }
