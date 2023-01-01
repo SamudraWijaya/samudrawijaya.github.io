@@ -249,136 +249,52 @@ main {
   bottom: 0;
 }
 
-/* profile */
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
+/* about */
+section {
+  z-index: 1000;
 }
-.container3 {
-  max-width: 1100px;
+.about {
   width: 100%;
-  margin: auto;
+  padding: 100px 0%;
 }
-.profile {
-  padding: 100px 18%;
+.about img {
+  width: 430px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 20px;
 }
-.section .container3 {
-  padding-top: 60px;
-  padding-bottom: 70px;
+.about-text {
+  width: 550px;
 }
-.section-title {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 60px;
-}
-.section-title h2 {
-  font-size: 30px;
-  color: #000000;
-  font-weight: 700;
+.main {
   position: relative;
-}
-.section-title h2::before {
-  content: "";
-  height: 4px;
-  width: 50px;
-  background-color: #147c00;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-.section-title h2::after {
-  content: "";
-  height: 4px;
-  width: 25px;
-  background-color: #147c00;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 8px;
-}
-
-.profile .content {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 15px;
-}
-.profile .content .text {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 15px;
-}
-.profile .content .text h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  font-weight: 700;
-  font-family: "Ubuntu", sans-serif;
-}
-.profile .content .text p {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 16px;
-  line-height: 25px;
-}
-.profile .content .personal-info {
-  flex: 0 0 60%;
-  max-width: 60%;
-  margin-top: 40px;
-}
-.profile .content .personal-info .info-item {
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
   display: flex;
-  flex: 0 0 50%;
-  max-width: 50%;
+  justify-content: space-around;
+  align-items: center;
 }
-.profile .content .personal-info .info-item p {
-  font-weight: 600;
-  padding: 10px 0;
-  font-size: 16px;
-  border-bottom: 1px solid rgb(228, 224, 224);
-}
-.profile .content .personal-info .info-item p span {
-  font-weight: 400;
-  color: #414040;
-  margin-left: 4px;
-  display: inline-block;
-}
-.profile .content .skill {
-  flex: 0 0 40%;
-  max-width: 40%;
-  margin-top: 40px;
-}
-.profile .content .skill .skill-item {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 30px;
-}
-.profile .content .skill .skill-item h5 {
-  line-height: 40px;
-  font-weight: 600;
-  font-size: 16px;
+.about h1 {
+  align-items: center;
+  text-align: center;
+  font-size: 35px;
   text-transform: capitalize;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 20px;
+  display: none;
 }
-.profile .content .skill .skill-item .progress {
-  background-color: #4f504f;
-  height: 7px;
-  border-radius: 4px;
-  width: 100%;
-  position: relative;
+.about-text h2 {
+  font-size: 55px;
+  text-transform: capitalize;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 20px;
 }
-.profile .content .skill .skill-item .progress .progress-in {
-  position: absolute;
-  left: 0;
-  top: o;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #147c00;
-}
-.profile .content .skill .skill-item .skill-percent {
-  position: absolute;
-  right: 0;
-  top: -40px;
-  font-weight: 400;
-  line-height: 40px;
+.about-text p {
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 45px;
 }
 
 /* portofolio */
@@ -907,29 +823,6 @@ button {
   main {
     padding: 70px 3%;
   }
-  .menu-toogle {
-    display: flex;
-  }
-  nav ul {
-    position: absolute;
-    right: 0;
-    top: 60px;
-    height: 10vh;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    justify-content: space-evenly;
-    background-color: white;
-    z-index: -1;
-    transform: translateY(-100%);
-    transition: all 1s;
-    opacity: 0;
-  }
-  nav ul.slide {
-    opacity: 1;
-    transform: rotateX(0);
-  }
   .portofolio,
   .profile {
     padding: 60px 3%;
@@ -942,51 +835,19 @@ button {
 
 /* tablet */
 @media screen and (max-width: 768px) {
-    .item {
+  .item {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
-  .menu-toogle {
+  .main {
     display: flex;
+    flex-direction: column-reverse;
   }
-  nav ul {
-    position: absolute;
-    right: 0;
-    top: 60px;
-    height: 10vh;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    justify-content: space-evenly;
-    background-color: white;
-    z-index: -1;
-    transform: translateY(-100%);
-    transition: all 1s;
-    opacity: 0;
-  }
-  nav ul.slide {
-    opacity: 1;
-    transform: rotateX(0);
-  }
-  .sub,
-  .portofolio,
-  .contact,
-  main {
-    padding: 70px 3%;
-  }
-
-  .image-content,
-  .profile .content .skill,
-  .profile .content .personal-info {
-    flex: 0 0 100%;
-    max-width: 100%;
+  .about-text {
     text-align: center;
     align-items: center;
-    justify-content: center;
-    transition: 0.3s;
   }
 }
 
