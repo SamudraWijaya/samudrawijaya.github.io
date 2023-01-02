@@ -157,6 +157,7 @@ section {
 
 .item {
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
   width: auto;
   justify-content: center;
@@ -486,7 +487,6 @@ section {
   opacity: 1;
 }
 
-
 /* project */
 .project {
   position: relative;
@@ -527,6 +527,157 @@ section {
 .project-card:hover img {
   transform: scale(1.1);
   transition: all 0.3s ease-in;
+}
+
+/* contact */
+.contact {
+  width: 100%;
+  height: 100%;
+  padding: 70px 1%;
+}
+.contact-box {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.contact h2 {
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  text-transform: capitalize;
+  font-family: "Roboto Slab", serif;
+}
+.contact-container {
+  background: white;
+  width: 400px;
+  max-width: 700px;
+  /* padding: 25px 30px; */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.contact-header {
+  background-image: url(/img/sub1.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 30px;
+  height: 50px;
+}
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+.contact-item {
+  margin: 10px;
+}
+.contact-item .icon {
+  display: inline-block;
+}
+.contact-item .icon .fa {
+  font-size: 25px;
+  color: #147c00;
+}
+.contact-item h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: black;
+  text-transform: capitalize;
+  margin: 15px 0 5px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.contact-item p {
+  font-size: 15px;
+  line-height: 25px;
+  color: black;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+form {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+form ul {
+  margin-top: 12px;
+}
+form ul li {
+  position: relative;
+  width: 100%;
+}
+form ul li .inp {
+  width: 70%;
+  padding: 6px;
+  margin: 7px 0;
+  border: 2px solid #adadad;
+  border-radius: 4px;
+  font: inherit;
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(70px, 15px);
+  transition: transform 0.25s;
+  color: #adadad;
+  pointer-events: none;
+  font-family: "Ubuntu", sans-serif;
+}
+form .inp:focus + .input-label,
+form .inp:valid + .input-label {
+  transform: translate(60px, -1px) scale(0.8);
+  padding-inline: 5px;
+  background-color: white;
+}
+ul li input:focus ~ label {
+  color: #147c00;
+}
+ul li textarea:focus ~ label {
+  color: #147c00;
+}
+ul li input[type="text"]:focus {
+  border: 2px solid #147c00;
+  outline: 0;
+  transition: border 0.15s;
+}
+ul li input[type="email"]:focus {
+  border: 2px solid #147c00;
+  outline: 0;
+  transition: border 0.15s;
+}
+ul li textarea:focus {
+  border: 2px solid #147c00;
+  outline: 0;
+  transition: border 0.15s;
+}
+
+.btn {
+  width: 50%;
+  height: 60%;
+  outline: none;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  background: #147c00;
+  padding: 6px 0;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+.btn:hover {
+  background: #147c00;
+  box-shadow: 0px 0px 10px #00122e;
+  transition: all 0.2s linear;
 }
 
 /* scroll */
@@ -648,14 +799,14 @@ footer .end {
     padding: 100px 7%;
   }
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .item {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
-}
+} */
 @media screen and (max-width: 576px) {
   #menu-bars {
     display: initial;
